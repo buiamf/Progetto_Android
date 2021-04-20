@@ -1,22 +1,25 @@
 <resources>
     <string name="app_name">Notes</string>
-    <string name="email_field">email</string>
-    <string name="password_field">password</string>
+    <string name="email_field">Email</string>
+    <string name="password_field">Password</string>
     <string name="registrati_button">Registrati</string>
     <string name="login_button">Login</string>
     <string name="recupera_password_button">Recupera Password</string>
-    <string name="insert_email">inserisci email</string>
-    <string name="insert_password">inserisci password</string>
-    <string name="confirm_password">conferma password</string>
+    <string name="insert_email">Inserisci email</string>
+    <string name="insert_password">Inserisci password</string>
+    <string name="confirm_password">Conferma password</string>
     <string name="next_button">Avanti</string>
-    <string name="inserisci_nome">inserisci nome</string>
-    <string name="inserisci_cognome">inserisci cognome</string>
-    <string name="inserisci_data_di_nascita">data di nascita</string>
-    <string name="luogo_di_nascita">luogo di nascita</string>
-    <string name="genere">genere</string>
-    <string name="via_e_citta">via e città</string>
+    <string name="inserisci_nome">Inserisci nome</string>
+    <string name="inserisci_cognome">Inserisci cognome</string>
+    <string name="inserisci_data_di_nascita">Data di nascita</string>
+    <string name="luogo_di_nascita">Luogo di nascita</string>
+    <string name="genere">Genere</string>
+    <string name="genereMaschile">M</string>
+    <string name="genereFemminile">F</string>
+    <string name="genereNonDefinito">Altro</string>
+    <string name="via_e_citta">Via e città</string>
     <string name="conferma_button">Conferma</string>
     <string name="salta_button"><u>Salta</u></string>
     <string name="conferma_email">Conferma Email</string>
-    <string name="inserisci_codice">inserisci codice</string>
+    <string name="inserisci_codice">Inserisci codice</string>
 </resources>
