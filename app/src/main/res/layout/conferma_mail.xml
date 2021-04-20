@@ -7,12 +7,15 @@
 
     <TextView
         android:id="@+id/codice_comment"
-        style="@style/titolo"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="220dp"
+        android:fontFamily="serif"
+        android:text="Inserisci il codice ricevuto via email"
+        android:textAlignment="center"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,13 +24,13 @@
         style="@style/editnote"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="24dp"
         android:hint="@string/inserisci_codice"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/codice_comment" />
 
     <Button
         android:id="@+id/conferma_email_button"
@@ -35,7 +38,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/conferma_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/conferma_codice" />
 
