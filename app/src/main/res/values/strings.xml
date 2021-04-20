@@ -17,4 +17,6 @@
     <string name="via_e_citta">via e città</string>
     <string name="conferma_button">Conferma</string>
     <string name="salta_button"><u>Salta</u></string>
+    <string name="conferma_email">Conferma Email</string>
+    <string name="inserisci_codice">inserisci codice</string>
 </resources>
