@@ -33,6 +33,10 @@ android {
 }
 
 dependencies {
+    implementation 'org.jetbrains.exposed:exposed-core:0.30.1'
+    implementation 'org.jetbrains.exposed:exposed-dao:0.30.1'
+    implementation 'org.jetbrains.exposed:exposed-jdbc:0.30.1'
+    implementation 'org.jetbrains.exposed:exposed-jodatime:0.30.1'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
