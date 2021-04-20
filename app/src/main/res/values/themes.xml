@@ -16,8 +16,6 @@
 
     <style name="editnote"
         parent="Widget.AppCompat.EditText">
-        <item name="android:textAppearance">22sp</item>
-        <item name="android:lineSpacingMultiplier">1dp</item>
         <item name="android:textSize">22sp</item>
         <item name="fontFamily">serif</item>
         <item name="android:textColor">@color/white</item>
@@ -26,7 +24,6 @@
 
     <style name="titolo"
         parent="Widget.AppCompat.TextView">
-        <item name="android:textAppearance">22sp</item>
         <item name="android:textSize">22sp</item>
         <item name="fontFamily">serif</item>
         <item name="android:textColor">@color/white</item>
@@ -37,7 +34,6 @@
         parent="Widget.AppCompat.Button">
         <item name="android:layout_width">140dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAppearance">22sp</item>
         <item name="android:textSize">22sp</item>
         <item name="fontFamily">monospace</item>
         <item name="android:textColor">@color/white</item>
@@ -48,7 +44,6 @@
         parent="Widget.AppCompat.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:textAppearance">22sp</item>
         <item name="android:textSize">22sp</item>
         <item name="fontFamily">monospace</item>
         <item name="android:textColor">@color/white</item>
