@@ -56,7 +56,6 @@
     <Button
         android:id="@+id/button_registrati"
         style="@style/bottone_smussato"
-
         android:layout_marginTop="20dp"
         android:text="@string/registrati_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,10 +66,10 @@
     <Button
         android:id="@+id/button_login"
         style="@style/bottone_smussato"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="16dp"
         android:text="@string/login_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_registrati" />
 

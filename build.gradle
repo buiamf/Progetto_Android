@@ -18,6 +18,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+        // Versions after 0.30.1
+        mavenCentral()
+
     }
 }
 
