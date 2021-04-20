@@ -87,17 +87,20 @@
         style="@style/editnote"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
         android:hint="@string/via_e_citta"
+        app:layout_constraintBottom_toTopOf="@+id/register_button"
         app:layout_constraintEnd_toEndOf="@+id/genere_registrazione"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/genere_registrazione"
-        tools:layout_editor_absoluteY="468dp" />
+        app:layout_constraintStart_toStartOf="@+id/genere_registrazione" />
 
     <Button
         android:id="@+id/register_button"
         style="@style/bottone_banner"
         android:text="@string/conferma_button"
-        tools:layout_editor_absoluteY="677dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
