@@ -27,4 +27,7 @@
     <string name="testo_codiceOTP">Inserisci il codice ricevuto via email</string>
     <string name="registrazione_testo">Crea un nuovo account</string>
     <string name="testo_datiExtra">Completa il tuo account</string>
+    <string name="titolo_nota"><b>titolo nota</b></string>
+    <string name="data_nota">data nota</string>
+    <string name="anteprima_nota">anteprima nota</string>
 </resources>
