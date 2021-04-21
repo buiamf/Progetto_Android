@@ -22,6 +22,12 @@
     <string name="salta_button"><u>Salta</u></string>
     <string name="conferma_email">Conferma Email</string>
     <string name="inserisci_codice">Inserisci codice</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registrazione_titolo">Registrazione</string>
+    <string name="testo_codiceOTP">Inserisci il codice ricevuto via email</string>
+    <string name="registrazione_testo">Crea un nuovo account</string>
+    <string name="testo_datiExtra">Completa il tuo account</string>
+    <string name="titolo_nota"><b>titolo nota</b></string>
+    <string name="data_nota">data nota</string>
+    <string name="anteprima_nota">anteprima nota</string>
 </resources>
