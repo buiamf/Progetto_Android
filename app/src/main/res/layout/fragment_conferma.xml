@@ -11,7 +11,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="220dp"
         android:fontFamily="serif"
-        android:text="Inserisci il codice ricevuto via email"
+        android:text="@string/testo_codiceOTP"
         android:textAlignment="center"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/conferma_codice"
         style="@style/editnote"
         android:layout_width="200dp"

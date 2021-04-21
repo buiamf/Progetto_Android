@@ -19,6 +19,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/datiExtra_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="serif"
+        android:text="@string/testo_datiExtra"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/nome_registrazione"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/nome_registrazione"
         style="@style/editnote"
@@ -39,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:hint="@string/inserisci_cognome"
-        android:inputType="text"
+        android:inputType="text|date"
         app:layout_constraintBottom_toTopOf="@+id/data_di_nascita_registrazione"
         app:layout_constraintStart_toStartOf="@+id/nome_registrazione"
         app:layout_constraintEnd_toEndOf="@+id/nome_registrazione"
@@ -52,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:hint="@string/inserisci_data_di_nascita"
-        android:inputType="text"
+        android:inputType="text|date"
         app:layout_constraintBottom_toTopOf="@+id/luogo_di_nascita_registrazione"
         app:layout_constraintStart_toStartOf="@+id/cognome_registrazione"
         app:layout_constraintEnd_toEndOf="@+id/cognome_registrazione"
@@ -89,7 +102,7 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toTopOf="@+id/register_button"
         app:layout_constraintStart_toStartOf="@+id/via_e_citta_registrazione"
         app:layout_constraintEnd_toEndOf="@+id/via_e_citta_registrazione">
@@ -99,7 +112,6 @@
             android:layout_height="wrap_content"
             android:text="@string/genere"
             android:fontFamily="serif"
-            android:textColor="@color/black"
             android:textSize="22sp" />
         <CheckBox android:id="@+id/checkbox_masculine"
             android:layout_width="wrap_content"
