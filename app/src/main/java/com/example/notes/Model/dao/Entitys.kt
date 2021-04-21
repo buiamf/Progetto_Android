@@ -1,5 +1,7 @@
 package com.example.notes.Model.dao
 
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
@@ -11,15 +13,15 @@ import java.util.*
 @Entity(tableName = "user")
 data class EntityUser(
     @PrimaryKey(autoGenerate = true) val idUser: Int,
-    @ColumnInfo(name = "email") val email: String,
-    @ColumnInfo(name = "password") val password: String,
-    @ColumnInfo(name = "nome") val nome: String,
-    @ColumnInfo(name = "cognome") val cognome: String
+    @NonNull @ColumnInfo(name = "email") val email: String,
+    @NonNull @ColumnInfo(name = "password") val password: String,
+    @ColumnInfo(name = "nome") val nome: String?,
+    @ColumnInfo(name = "cognome") val cognome: String?
 )
 
 
 @Entity(
-    tableName = "informazioni", foreignKeys = arrayOf(
+    tableName = "information", foreignKeys = arrayOf(
         ForeignKey(
             entity = EntityUser::class,
             parentColumns = arrayOf("idUser"),
@@ -30,10 +32,10 @@ data class EntityUser(
 )
 data class EntityInformazioni(
     @PrimaryKey(autoGenerate = false) val idUser: Int,
-    @ColumnInfo(name = "genere") val genere: Char,
-    @ColumnInfo(name = "luogo") val luogo: String,
-    @ColumnInfo(name = "data") val data: Date,
-    @ColumnInfo(name = "indirizzo") val indirizzo: String
+    @ColumnInfo(name = "genere") val genere: Char?,
+    @ColumnInfo(name = "luogo") val luogo: String?,
+    @ColumnInfo(name = "data") val data: Date?,
+    @ColumnInfo(name = "indirizzo") val indirizzo: String?
 )
 
 @Entity(
@@ -50,7 +52,7 @@ data class EntityNote(
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "idUser") val idUser: Int,
     @ColumnInfo(name = "titolo") val titolo: String,
-    @ColumnInfo(name = "testo") val testo: Text
+    @ColumnInfo(name = "testo") val testo: Text?
 
 )
 
@@ -73,7 +75,7 @@ data class EntityModificaNote(
 )
 
 @Entity(
-    tableName = "Accesso", foreignKeys = arrayOf(
+    tableName = "access", foreignKeys = arrayOf(
         ForeignKey(
             entity = EntityUser::class,
             parentColumns = arrayOf("idUser"),

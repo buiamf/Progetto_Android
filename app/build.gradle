@@ -9,6 +9,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
     buildFeatures {
         viewBinding = true
     }
@@ -38,13 +39,7 @@ android {
     }
 }
 
-apply plugin: "kotlin-kapt"
-
 dependencies {
-    implementation 'org.jetbrains.exposed:exposed-core:0.30.1'
-    implementation 'org.jetbrains.exposed:exposed-dao:0.30.1'
-    implementation 'org.jetbrains.exposed:exposed-jdbc:0.30.1'
-    implementation 'org.jetbrains.exposed:exposed-jodatime:0.30.1'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
@@ -52,7 +47,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -67,9 +62,24 @@ dependencies {
     testImplementation "androidx.room:room-testing:$room_version"
     def lifecycle_version = "2.3.0"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    kapt "androidx.room:room-compiler:$room_version"
     //pull
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    //Adding DataBinding and Implementations
+    def life_versions = "1.1.1"
+
+// Room components
+    implementation "android.arch.persistence.room:runtime:$life_versions"
+    annotationProcessor "android.arch.persistence.room:compiler:$life_versions"
+    androidTestImplementation "android.arch.persistence.room:testing:$life_versions"
+
+// Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$life_versions"
+    annotationProcessor "android.arch.lifecycle:compiler:$life_versions"
 
 
 }

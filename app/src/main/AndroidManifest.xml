@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Notes">
-        <activity android:name=".views.DatiAggiuntivi"></activity>
         <activity android:name=".views.Registrazione" />
         <activity android:name=".views.MainActivity">
             <intent-filter>
