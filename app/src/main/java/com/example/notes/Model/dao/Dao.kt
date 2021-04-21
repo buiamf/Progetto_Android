@@ -43,7 +43,7 @@ interface DaoInformazioni {
 interface DaoNote {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertUser(vararg notes: EntityNote)
+    suspend fun insertNote(vararg notes: EntityNote)
 
     @Delete
     suspend fun deleteNote(id: EntityNote)

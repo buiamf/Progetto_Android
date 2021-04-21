@@ -23,18 +23,23 @@ abstract class DatabaseAndroid : RoomDatabase() {
 
     companion object {
         @Volatile
-        private var instance: DatabaseAndroid? = null
-        private val LOCK = Any()
+        private var INSTANCE: DatabaseAndroid? = null
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
-            instance ?: buildDatabase(context).also { instance = it }
+        fun getDatabase(context: Context): DatabaseAndroid {
+            val tempInstance = INSTANCE
+            if (tempInstance != null) {
+                return tempInstance
+            }
+            synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    DatabaseAndroid::class.java,
+                    "android_database"
+                ).build()
+                INSTANCE = instance
+                return instance
+            }
         }
-
-        private fun buildDatabase(context: Context) = Room.databaseBuilder(
-            context,
-            DatabaseAndroid::class.java, "App_Android.db"
-        )
-            .build()
     }
 
 

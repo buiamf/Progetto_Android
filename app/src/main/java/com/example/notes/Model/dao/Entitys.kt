@@ -1,7 +1,5 @@
 package com.example.notes.Model.dao
 
-import androidx.annotation.NonNull
-import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
@@ -13,10 +11,10 @@ import java.util.*
 @Entity(tableName = "user")
 data class EntityUser(
     @PrimaryKey(autoGenerate = true) val idUser: Int,
-    @NonNull @ColumnInfo(name = "email") val email: String,
-    @NonNull @ColumnInfo(name = "password") val password: String,
-    @ColumnInfo(name = "nome") val nome: String?,
-    @ColumnInfo(name = "cognome") val cognome: String?
+    @ColumnInfo(name = "email") val email: String,
+    @ColumnInfo(name = "password") val password: String,
+    @ColumnInfo(name = "nome") val nome: String,
+    @ColumnInfo(name = "cognome") val cognome: String
 )
 
 
@@ -52,7 +50,7 @@ data class EntityNote(
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "idUser") val idUser: Int,
     @ColumnInfo(name = "titolo") val titolo: String,
-    @ColumnInfo(name = "testo") val testo: Text?
+    @ColumnInfo(name = "testo") val testo: String
 
 )
 
