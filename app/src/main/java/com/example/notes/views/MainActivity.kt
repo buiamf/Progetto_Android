@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import com.example.notes.R
 import com.example.notes.databinding.ActivityMainBinding
+import com.example.notes.utilities.*
+import com.example.notes.utilities.transizioneLogin
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,30 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-    }
 
-    override fun onStart() {
-        super.onStart()
-    }
+        with(binding) {
+            buttonLogin.setOnClickListener { transizioneLogin(this@MainActivity) }
+            buttonLogin.setOnClickListener { transizioneRegistrati(this@MainActivity) }
+        }
 
-    override fun onResume() {
-        super.onResume()
-    }
 
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
-    override fun onRestart() {
-        super.onRestart()
     }
 
 }

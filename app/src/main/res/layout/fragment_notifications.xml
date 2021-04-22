@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <ImageView
+        android:id="@+id/logo_profilo"
+        android:layout_width="71dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_profilo"
+        app:layout_constraintBottom_toTopOf="@+id/email_profilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/email_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="email profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_email"
+        app:layout_constraintEnd_toEndOf="@+id/edit_email"
+        app:layout_constraintStart_toStartOf="@+id/edit_email" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/password_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/password_profilo"
+        app:layout_constraintStart_toStartOf="@+id/password_profilo" />
+
+    <TextView
+        android:id="@+id/password_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="password profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_password"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintStart_toStartOf="@+id/edit_password" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nome_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/nome_profilo"
+        app:layout_constraintStart_toStartOf="@+id/nome_profilo" />
+
+    <TextView
+        android:id="@+id/nome_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="nome profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_nome"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nome"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cognome_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/cognome_profilo"
+        app:layout_constraintStart_toStartOf="@+id/cognome_profilo" />
+
+    <TextView
+        android:id="@+id/cognome_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="cognome profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_cognome"
+        app:layout_constraintEnd_toEndOf="@+id/edit_cognome"
+        app:layout_constraintStart_toStartOf="@+id/edit_cognome" />
+
+    <EditText
+        android:id="@+id/edit_cognome"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/data_di_nascita_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/data_di_nascita_profilo"
+        app:layout_constraintStart_toStartOf="@+id/data_di_nascita_profilo" />
+
+    <TextView
+        android:id="@+id/data_di_nascita_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="data di nascita"
+        app:layout_constraintBottom_toTopOf="@+id/edit_data"
+        app:layout_constraintEnd_toEndOf="@+id/edit_data"
+        app:layout_constraintStart_toStartOf="@+id/edit_data" />
+
+    <EditText
+        android:id="@+id/edit_data"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/via_e_citta_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/via_e_citta_profilo"
+        app:layout_constraintStart_toStartOf="@+id/via_e_citta_profilo" />
+
+    <TextView
+        android:id="@+id/via_e_citta_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="via e citta profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_via"
+        app:layout_constraintEnd_toEndOf="@+id/edit_via"
+        app:layout_constraintStart_toStartOf="@+id/edit_via" />
+
+    <EditText
+        android:id="@+id/edit_via"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/genere_profilo"
+        app:layout_constraintEnd_toEndOf="@+id/genere_profilo"
+        app:layout_constraintStart_toStartOf="@+id/genere_profilo" />
+
+    <TextView
+        android:id="@+id/genere_profilo"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="genere profilo"
+        app:layout_constraintBottom_toTopOf="@+id/edit_genere"
+        app:layout_constraintEnd_toEndOf="@+id/edit_genere"
+        app:layout_constraintStart_toStartOf="@+id/edit_genere" />
+
+    <EditText
+        android:id="@+id/edit_genere"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/aggiorna_profilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bottone_aggiorna_profilo"
+        style="@style/bottone_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aggiorna Profilo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
