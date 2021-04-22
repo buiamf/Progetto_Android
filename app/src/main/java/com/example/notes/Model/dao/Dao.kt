@@ -78,9 +78,4 @@ interface DaoAccesso {
 
 }
 
-@Dao
-interface DaoDataAccesso {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertDataAccesso(vararg access: EntityDataAccesso)
-}

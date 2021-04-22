@@ -1,18 +1,20 @@
 import android.content.Context
+import android.os.Parcelable
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.notes.Model.dao.*
 
-
 @Database(
-    entities = [EntityUser::class, EntityInformazioni::class,
-        EntityNote::class, EntityModificaNote::class,
-        EntityAccesso::class, EntityDataAccesso::class],
-    version = 1,
-    exportSchema = false
+    entities = [EntityUser::class,
+        EntityInformazioni::class,
+        EntityNote::class,
+        EntityModificaNote::class,
+        EntityAccesso::class,
+        EntityDataAccesso::class],
+    version = 1
 )
-abstract class DatabaseAndroid : RoomDatabase() {
+abstract class DatabaseAndroid : RoomDatabase(), Parcelable {
 
     abstract fun userDao(): DaoUser
     abstract fun informazioniDao(): DaoInformazioni
@@ -34,7 +36,7 @@ abstract class DatabaseAndroid : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     DatabaseAndroid::class.java,
-                    "android_database"
+                    "database"
                 ).build()
                 INSTANCE = instance
                 return instance

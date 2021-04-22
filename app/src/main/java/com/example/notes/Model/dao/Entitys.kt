@@ -29,10 +29,10 @@ data class EntityUser(
     )
 )
 data class EntityInformazioni(
-    @PrimaryKey(autoGenerate = false) val idUser: Int,
+    @PrimaryKey(autoGenerate = true) val idUser: Int,
     @ColumnInfo(name = "genere") val genere: Char?,
     @ColumnInfo(name = "luogo") val luogo: String?,
-    @ColumnInfo(name = "data") val data: Date?,
+    //   @ColumnInfo(name = "data") val data: String?,
     @ColumnInfo(name = "indirizzo") val indirizzo: String?
 )
 
@@ -67,8 +67,8 @@ data class EntityNote(
 )
 data class EntityModificaNote(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "dataCreazione") val dataCreazione: Date,
-    @ColumnInfo(name = "dataModifica") val dataModifica: Date
+    @ColumnInfo(name = "dataCreazione") val dataCreazione: String,
+    @ColumnInfo(name = "dataModifica") val dataModifica: String
 
 )
 
@@ -102,6 +102,6 @@ data class EntityAccesso(
 )
 data class EntityDataAccesso(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "data") val data: Date,
+    @ColumnInfo(name = "data") val data: String,
     @ColumnInfo(name = "entrata") val entrata: String
-    )
+)

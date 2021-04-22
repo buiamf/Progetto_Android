@@ -1,15 +1,11 @@
 package com.example.notes.views
 
 import DatabaseAndroid
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.notes.Model.dao.EntityNote
-import com.example.notes.Model.dao.EntityUser
-import com.example.notes.R
 import com.example.notes.databinding.ActivityMainBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,20 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
 
-        val db = DatabaseAndroid.getDatabase(this)
 
-           /* GlobalScope.launch {
-                db.userDao()
-                    .insertUser(EntityUser(1, "pippino@gmial.com", "afacc", "gino", "cose"))
-            }
-            */
+        /* GlobalScope.launch {
+             db.userDao()
+                 .insertUser(EntityUser(1, "pippino@gmial.com", "afacc", "gino", "cose"))
+         }
+         */
 
-            GlobalScope.launch {
-                db.noteDao()
-                    .insertNote(EntityNote(1,1,"casna","sbajcbik"))
-            }
+        lifecycleScope.launchWhenResumed {
+            val db = DatabaseAndroid.getDatabase(this@MainActivity)
+            db.noteDao()!!.insertNote(EntityNote(0, 0, "casna", "sbajcbik"))
+        }
 
-            setContentView(binding.root)
+        setContentView(binding.root)
 
 
     }
