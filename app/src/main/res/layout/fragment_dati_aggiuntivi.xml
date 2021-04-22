@@ -99,7 +99,7 @@
 
     <LinearLayout
         android:id="@+id/checkboxes_genere"
-        android:layout_width="wrap_content"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal"
@@ -111,27 +111,31 @@
             android:id="@+id/genere_regitrazione"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="serif"
             android:text="@string/genere"
             android:textSize="22sp" />
 
-        <CheckBox
-            android:id="@+id/checkbox_masculine"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/genereMaschile" />
-
-        <CheckBox
-            android:id="@+id/checkbox_feminine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/genereFemminile" />
-
-        <CheckBox
-            android:id="@+id/checkbox_other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/genereNonDefinito" />
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_masculine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genereMaschile"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_feminine"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:text="@string/genereFemminile"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genereNonDefinito"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
     </LinearLayout>
 
     <Button
