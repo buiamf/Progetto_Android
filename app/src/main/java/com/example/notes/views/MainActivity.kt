@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
             buttonLogin.setOnClickListener { transizioneLogin(this@MainActivity) }
-            buttonLogin.setOnClickListener { transizioneRegistrati(this@MainActivity) }
+            buttonRegistrati.setOnClickListener { transizioneRegistrati(this@MainActivity) }
         }
 
 

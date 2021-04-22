@@ -1,8 +1,13 @@
 package com.example.notes.utilities
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
-import com.example.notes.views.ActivityNavigation
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
+import com.example.notes.R
+import com.example.notes.views.*
 
 fun Activity.transizioneLogin(activity: Activity) {
     val intent = Intent(activity,ActivityNavigation::class.java)
@@ -10,6 +15,25 @@ fun Activity.transizioneLogin(activity: Activity) {
 }
 
 fun Activity.transizioneRegistrati(activity: Activity) {
-    val intent = Intent(activity,ActivityNavigation::class.java)
+    val intent = Intent(activity,Registrazione::class.java)
     startActivity(intent)
+}
+
+fun Activity.transizioneRegistrazioneAvanzata(activity: Activity) {
+    val intent = Intent(activity,ActivityRegistrazioneAvanzata::class.java)
+    startActivity(intent)
+}
+
+fun Fragment.transizioneToLogin(activity: Context?) {
+    val intent = Intent(activity,MainActivity::class.java)
+    startActivity(intent)
+}
+
+fun Fragment.transizioneToConfermaEmail() {
+    val fragmentManager = parentFragmentManager
+    val fragmentTransaction = fragmentManager.beginTransaction()
+    fragmentManager.commit {
+        setReorderingAllowed(true)
+        replace<FragmentConferma>(R.id.fragment_container_registrazione)
+    }
 }
