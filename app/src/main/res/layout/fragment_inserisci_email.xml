@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_dimenticata_comment" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/invia_codice_button"
         style="@style/bottone_smussato"
         android:layout_width="200dp"
