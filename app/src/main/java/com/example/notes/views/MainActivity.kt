@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.IO) {
             //val db = DatabaseAndroid.getDatabase(this@MainActivity)
-           // db.userDao().insert(EntityUser(2, "pippino.it", "ciccio", "pluto", "Luiggino"))
+            //db.userDao().insert(EntityUser(1, "pippino.it", "ciccio", "pluto", "Luiggino"))
 
             val button = findViewById<Button>(R.id.button_login)
             val email = findViewById<EditText>(R.id.text_email)
@@ -49,12 +49,13 @@ class MainActivity : AppCompatActivity() {
 
 
                     val ema = email.indexOf(input0)
-                    Log.d("P", ema.toString())
+                    //Log.d("P", ema.toString())
                     val pas = password.indexOf(input1)
-                    Log.d("P", pas.toString())
+                    // Log.d("P", pas.toString())
 
                     when {
-                        db.userDao().checkPassword(input0,input1) ->transizioneLogin(this@MainActivity)
+                        db.userDao()
+                            .checkPassword(input0, input1) -> transizioneLogin(this@MainActivity)
                         !db.userDao().checkEmail(input0) -> Log.d("P", "Email non corretta")
                         else -> Log.d("P", "Password non corretta")
                     }
@@ -67,11 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
-
         with(binding) {
-            buttonLogin.setOnClickListener { transizioneLogin(this@MainActivity) }
             buttonRegistrati.setOnClickListener { transizioneRegistrati(this@MainActivity) }
         }
 
