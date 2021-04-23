@@ -1,5 +1,6 @@
 package com.example.notes.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -40,6 +41,7 @@ class FragmentDatiAggiuntivi : Fragment() {
 
 
             val button = binding.registerButton
+            val skip = binding.skipDati
             val nome = binding.nomeRegistrazione
             val cognome = binding.cognomeRegistrazione
             val data = binding.dataDiNascitaRegistrazione
@@ -48,30 +50,23 @@ class FragmentDatiAggiuntivi : Fragment() {
             val maschile = binding.radioMasculine
             val femm = binding.radioFeminine
             val altro = binding.radioOther
-            maschile.setOnClickListener { genere = onRadioButtonClicked(maschile)}
-            femm.setOnClickListener { genere = onRadioButtonClicked(femm)}
-            altro.setOnClickListener { genere = onRadioButtonClicked(altro)}
+            maschile.setOnClickListener { genere = onRadioButtonClicked(maschile) }
+            femm.setOnClickListener { genere = onRadioButtonClicked(femm) }
+            altro.setOnClickListener { genere = onRadioButtonClicked(altro) }
+
+            val n: String = nome.text.toString()
+            val c: String = cognome.text.toString()
+            val d: String = data.text.toString()
+            val l: String = luogo.text.toString()
 
 
             button.setOnClickListener {
 
-                val n: String = nome.text.toString()
-                val c: String = cognome.text.toString()
-                val d: String = data.text.toString()
-                val l: String = luogo.text.toString()
-
-                with(binding) {
-                    registerButton.setOnClickListener {
-                            transizioneToLogin(context)
-                    }
-                    skipDati.setOnClickListener { transizioneToConfermaEmail() }
-                }
-
                 GlobalScope.launch {
                     val db = DatabaseAndroid.getDatabase(requireContext())
-                    Log.d("bdsjbfsjdn",genere)
+                    Log.d("bdsjbfsjdn", genere)
 
-                    if(emaPass !=null ) {
+                    if (emaPass != null) {
 
                         db.userDao().insert(
                             EntityUser(
@@ -90,15 +85,40 @@ class FragmentDatiAggiuntivi : Fragment() {
 
                     }
 
-
-
-
+                    startActivity(Intent(activity,MainActivity::class.java))
                 }
-
 
             }
 
+            skip.setOnClickListener{
 
+                GlobalScope.launch {
+                    val db = DatabaseAndroid.getDatabase(requireContext())
+                    Log.d("bdsjbfsjdn", genere)
+
+                    if (emaPass != null) {
+
+                        db.userDao().insert(
+                            EntityUser(
+                                email = emaPass[0], password = emaPass[1], nome = " ", cognome = " "
+                            )
+                        )
+
+
+                        db.infoDao().insertInformation(
+                            EntityInformazioni(
+                                genere = " ",
+                                luogo = " ",
+                                data = " "
+                            )
+                        )
+
+                    }
+
+                    startActivity(Intent(activity,MainActivity::class.java))
+                }
+
+            }
 
         }
 
