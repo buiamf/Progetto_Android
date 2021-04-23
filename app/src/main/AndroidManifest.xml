@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Notes">
-        <activity android:name=".views.ActivityRegistrazioneAvanzata"></activity>
+        <activity android:name=".views.ActivityPasswordDimenticata"></activity>
+        <activity android:name=".views.ActivityRegistrazioneAvanzata" />
         <activity android:name=".views.Registrazione" />
         <activity android:name=".views.ActivityNavigation" />
         <activity android:name=".views.MainActivity">
