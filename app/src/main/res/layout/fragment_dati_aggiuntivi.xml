@@ -138,7 +138,7 @@
         </RadioGroup>
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/register_button"
         style="@style/bottone_banner"
         android:text="@string/conferma_button"
