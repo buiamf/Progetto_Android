@@ -8,16 +8,19 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.notes.R
+import com.example.notes.ui.home.HomeFragment
 
 class ActivityNavigation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         setContentView(R.layout.activity_navigation)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)

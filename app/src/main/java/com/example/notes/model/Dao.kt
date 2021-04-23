@@ -35,9 +35,9 @@ interface DaoInformazioni {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertInformation(vararg information: EntityInformazioni)
-//
+
 //    @Query("SELECT * FROM information WHERE idUserInf = :id")
-//    suspend fun informationUserInformation(id: Int): List<EntityInformazioni>
+//     fun informationUserInformation(id: Int): List<EntityInformazioni>
 
     @Update
     suspend fun updateUser(vararg information: EntityInformazioni)
@@ -61,8 +61,8 @@ interface DaoNote {
 //    @Query("DELETE FROM note WHERE idUserNote = :idUser") // cancella tutte le note che si riferiscono a quell utente
 //    suspend fun deleteAllNotesforUser(idUser: Int)
 //
-//    @Query("SELECT * FROM note WHERE idUserNote = :id  ")
-//    suspend fun getAllNoteforUser(id: Int): List<EntityNote>
+//    @Query("SELECT titolo,dataModifica, testo FROM note, modificaNote  WHERE idUserNote IN (:id)")
+//    fun getAllNoteforUser(id: Int): List<EntityNote>
 
 }
 

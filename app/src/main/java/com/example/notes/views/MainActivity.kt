@@ -47,6 +47,16 @@ class MainActivity : AppCompatActivity() {
                     val email: List<String> = db.userDao().getAllEmail()
                     val password: List<String> = db.userDao().getAllPassword()
 
+                    val intent = Intent(
+                        this@MainActivity,
+                        ActivityNavigation::class.java
+                    )
+                    intent.putExtra("message", input0)
+
+                    // transizioneRegistrazioneAvanzata(this@Registrazione)
+
+
+
 
                     val ema = email.indexOf(input0)
                     //Log.d("P", ema.toString())
@@ -55,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
                     when {
                         db.userDao()
-                            .checkPassword(input0, input1) -> transizioneLogin(this@MainActivity)
+                            .checkPassword(input0, input1) -> startActivity(intent) //transizioneLogin(this@MainActivity)
                         !db.userDao().checkEmail(input0) -> Log.d("P", "Email non corretta")
                         else -> Log.d("P", "Password non corretta")
                     }

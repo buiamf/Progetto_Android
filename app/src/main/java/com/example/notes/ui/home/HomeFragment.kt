@@ -39,36 +39,17 @@ class HomeFragment : Fragment() {
         */
         val binding = FragmentHomeBinding.inflate(layoutInflater)
 
-        GlobalScope.launch {
-            val db = DatabaseAndroid.getDatabase(requireActivity())
-
-
-           // var id = db.userDao().returnID(email)
-
-        }
-
-
-
-
 
         with(binding) {
             var viewAdapter: RecyclerView.Adapter<*>
             val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
-
-
-
-                //val arrayProva = arrayListOf(Nota("asd","fgh","jkl"))
-                //arrayProva.add(Nota("asd","fgh","jkl"))
+                val arrayProva = arrayListOf(Nota("nota","23/04/2021","Nota ...."))
+                arrayProva.add(Nota("nota2","23/04/2021","notina...."))
                 // aggiungere la lista delle note al posto di "ArrayList<Nota>"
 //            viewAdapter = RecyAdapter(ArrayList<Nota> , activity)
 
-                var email: String = " sd"
 
-
-
-
-                var arrayProva = arrayListOf<Nota>()
 
                 viewAdapter = RecyAdapter(arrayProva, activity)
 
