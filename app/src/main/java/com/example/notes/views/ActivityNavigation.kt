@@ -1,5 +1,6 @@
 package com.example.notes.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -45,7 +46,8 @@ class ActivityNavigation : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId) {
-            R.id.log_out_option -> {}
+            R.id.log_out_option -> { startActivity(Intent(this,MainActivity::class.java))
+            }
         }
 
         return super.onOptionsItemSelected(item)

@@ -25,11 +25,10 @@ data class EntityUser(
     )]
 )
 data class EntityInformazioni(
-    @PrimaryKey(autoGenerate = false) val idUserInf: Int,
+    @PrimaryKey(autoGenerate = true) val idUserInf: Int = 0,
     @ColumnInfo(name = "genere") val genere: String,
     @ColumnInfo(name = "luogo") val luogo: String?,
-    @ColumnInfo(name = "data") val data: String,
-    @ColumnInfo(name = "indirizzo") val indirizzo: String?
+    @ColumnInfo(name = "data") val data: String
 )
 
 @Entity(
