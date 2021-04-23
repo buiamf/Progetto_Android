@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/codice_comment" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/conferma_email_button"
         style="@style/bottone_smussato"
         android:layout_width="200dp"
