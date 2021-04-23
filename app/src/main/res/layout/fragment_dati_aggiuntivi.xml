@@ -53,10 +53,23 @@
         android:layout_marginBottom="32dp"
         android:hint="@string/inserisci_cognome"
         android:inputType="text|date"
-        app:layout_constraintBottom_toTopOf="@+id/data_di_nascita_registrazione"
+        app:layout_constraintBottom_toTopOf="@+id/via_e_citta_registrazione"
         app:layout_constraintEnd_toEndOf="@+id/nome_registrazione"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/nome_registrazione" />
+
+    <EditText
+        android:id="@+id/via_e_citta_registrazione"
+        style="@style/editnote"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:hint="@string/via_e_citta"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/data_di_nascita_registrazione"
+        app:layout_constraintEnd_toEndOf="@+id/cognome_registrazione"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cognome_registrazione" />
 
     <EditText
         android:id="@+id/data_di_nascita_registrazione"
@@ -67,35 +80,22 @@
         android:hint="@string/inserisci_data_di_nascita"
         android:inputType="text|date"
         app:layout_constraintBottom_toTopOf="@+id/luogo_di_nascita_registrazione"
-        app:layout_constraintEnd_toEndOf="@+id/cognome_registrazione"
+        app:layout_constraintEnd_toEndOf="@+id/via_e_citta_registrazione"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cognome_registrazione" />
+        app:layout_constraintStart_toStartOf="@+id/via_e_citta_registrazione" />
 
     <EditText
         android:id="@+id/luogo_di_nascita_registrazione"
         style="@style/editnote"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="22dp"
         android:hint="@string/luogo_di_nascita"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/via_e_citta_registrazione"
+        app:layout_constraintBottom_toTopOf="@+id/checkboxes_genere"
         app:layout_constraintEnd_toEndOf="@+id/data_di_nascita_registrazione"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/data_di_nascita_registrazione" />
-
-    <EditText
-        android:id="@+id/via_e_citta_registrazione"
-        style="@style/editnote"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:hint="@string/via_e_citta"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/checkboxes_genere"
-        app:layout_constraintEnd_toEndOf="@+id/luogo_di_nascita_registrazione"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/luogo_di_nascita_registrazione" />
 
     <LinearLayout
         android:id="@+id/checkboxes_genere"
