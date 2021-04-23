@@ -19,6 +19,11 @@ fun Activity.transizioneRegistrati(activity: Activity) {
     startActivity(intent)
 }
 
+fun Activity.transizionePasswordDimenticata(activity: Activity) {
+    val intent = Intent(activity,ActivityPasswordDimenticata::class.java)
+    startActivity(intent)
+}
+
 fun Activity.transizioneRegistrazioneAvanzata(activity: Activity) {
     val intent = Intent(activity,ActivityRegistrazioneAvanzata::class.java)
     startActivity(intent)
@@ -35,5 +40,14 @@ fun Fragment.transizioneToConfermaEmail() {
     fragmentManager.commit {
         setReorderingAllowed(true)
         replace<FragmentConferma>(R.id.fragment_container_registrazione)
+    }
+}
+
+fun Fragment.transizioneToReinserimentoPassword() {
+    val fragmentManager = parentFragmentManager
+    val fragmentTransaction = fragmentManager.beginTransaction()
+    fragmentManager.commit {
+        setReorderingAllowed(true)
+        replace<FragmentReinserimentoPassword>(R.id.fragment_container_password_dimenticata)
     }
 }

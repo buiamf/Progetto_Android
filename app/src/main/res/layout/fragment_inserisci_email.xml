@@ -3,15 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".views.FragmentInserisciEmail">
 
     <TextView
-        android:id="@+id/codice_comment"
+        android:id="@+id/annulla_recupero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:text="Annulla"
+        android:textColor="@color/azzurro_textview"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/password_dimenticata_comment"
         android:layout_width="303dp"
         android:layout_height="73dp"
         android:layout_marginTop="220dp"
         android:fontFamily="serif"
-        android:text="@string/testo_codiceOTP"
+        android:text="Inserisci l'email per resettare la password"
         android:textAlignment="center"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,28 +34,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/conferma_codice"
+        android:id="@+id/inserisci_email"
         style="@style/editnote"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="@string/inserisci_codice"
+        android:hint="Inserisci email"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/codice_comment" />
+        app:layout_constraintTop_toBottomOf="@+id/password_dimenticata_comment" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/conferma_email_button"
+    <Button
+        android:id="@+id/invia_codice_button"
         style="@style/bottone_smussato"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/conferma_email"
+        android:text="Conferma email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conferma_codice" />
+        app:layout_constraintTop_toBottomOf="@+id/inserisci_email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
