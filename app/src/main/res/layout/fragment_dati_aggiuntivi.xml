@@ -123,18 +123,15 @@
             <RadioButton android:id="@+id/radio_masculine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/genereMaschile"
-                android:onClick="onRadioButtonClicked"/>
+                android:text="@string/genereMaschile"/>
             <RadioButton android:id="@+id/radio_feminine"
                 android:layout_width="43dp"
                 android:layout_height="wrap_content"
-                android:text="@string/genereFemminile"
-                android:onClick="onRadioButtonClicked"/>
+                android:text="@string/genereFemminile"/>
             <RadioButton android:id="@+id/radio_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/genereNonDefinito"
-                android:onClick="onRadioButtonClicked"/>
+                android:text="@string/genereNonDefinito"/>
         </RadioGroup>
     </LinearLayout>
 
